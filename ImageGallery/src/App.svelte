@@ -37,8 +37,15 @@
   };
   const More = async () => {
     count++;
-    await fetch();
+   
+    // fetch data
+    fetch();
+  
+    // Append new images to the existing array
   };
+
+  // Fetch initial set of images on component mount
+
 </script>
 
 <main>
@@ -139,7 +146,7 @@
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 50%;
   }
 }
 
@@ -162,9 +169,10 @@
   position: absolute;
   background: linear-gradient(to let, #00ffff, #1e90ff, #00bfff, #4b0082);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  top: 0;
+  /* top: 0; */
+  bottom: 0;
 }
 .box-area{
   position: absolute;
@@ -180,7 +188,7 @@
   list-style: none;
 
   background: rgba(255, 255, 255, 0.2);
-  animation: animate 20s linear infinite;
+  animation: animate 30s linear infinite;
   bottom: -150px;
 }
 .box-area li:nth-child(1){
@@ -234,7 +242,7 @@
     opacity: 1;
   }
   100%{
-    transform: translateY(-800px) rotate(360deg);
+    transform: translateY(-2800px) rotate(360deg);
     opacity: 0;
   }
 }
